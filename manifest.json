@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "User Profile Extractor",
+  "version": "2.1",
+  "description": "Extrait le profil complet : historique de navigation + extensions installées pour analyse LLM",
+  "permissions": [
+    "history",
+    "downloads",
+    "management",
+    "bookmarks"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Extraire l'historique"
+  }
+}

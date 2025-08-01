@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        body {
+            width: 350px;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        
+        .container {
+            text-align: center;
+        }
+        
+        h1 {
+            color: #333;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        
+        .controls {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        input[type="number"] {
+            width: 60px;
+            padding: 5px;
+            margin-left: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            margin: 5px;
+        }
+        
+        button:hover {
+            background-color: #45a049;
+        }
+        
+        button:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+        
+        #downloadBtn {
+            background-color: #2196F3;
+        }
+        
+        #downloadBtn:hover {
+            background-color: #1976D2;
+        }
+        
+        .progress {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-radius: 4px;
+            display: none;
+        }
+        
+        .status {
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 4px;
+            font-weight: bold;
+            white-space: pre-line;
+            text-align: left;
+        }
+        
+        .success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+        .preview {
+            margin-top: 15px;
+            max-height: 200px;
+            overflow-y: auto;
+            border: 1px solid #ccc;
+            padding: 10px;
+            background-color: #f9f9f9;
+            text-align: left;
+            font-family: monospace;
+            font-size: 12px;
+            display: none;
+        }
+        
+        .prompt-area {
+            margin-top: 15px;
+            max-height: 300px;
+            overflow-y: auto;
+            border: 1px solid #ddd;
+            padding: 10px;
+            background-color: #f5f5f5;
+            text-align: left;
+            font-family: monospace;
+            font-size: 11px;
+            display: none;
+            white-space: pre-wrap;
+            line-height: 1.3;
+        }
+        
+        #promptBtn {
+            background-color: #FF9800;
+        }
+        
+        #promptBtn:hover {
+            background-color: #F57C00;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>� User Profile Extractor</h1>
+        
+        <div class="controls">
+            <p>📊 Extraction complète de l'historique et des extensions</p>
+        </div>
+        
+        <button id="extractBtn">Extraire l'historique</button>
+        <button id="previewBtn">Aperçu JSON</button>
+        <button id="downloadBtn" style="display: none;">Télécharger JSON</button>
+        <button id="promptBtn">📋 Voir le prompt d'analyse</button>
+        
+        <div id="progress" class="progress">
+            <div>Extraction en cours...</div>
+            <div id="progressText">Préparation...</div>
+        </div>
+        
+        <div id="status"></div>
+        
+        <div id="preview" class="preview"></div>
+        
+        <div id="promptArea" class="prompt-area"></div>
+    </div>
+    
+    <script src="popup.js"></script>
+</body>
+</html>
