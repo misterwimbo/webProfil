@@ -76,7 +76,7 @@ Cette extension Chrome extrait un profil utilisateur complet incluant l'historiq
 
 ### 1. Préparation
 1. Clonez ou téléchargez ce projet
-2. Ajoutez des icônes dans le dossier `icons/` (16x16, 48x48, 128x128 pixels)
+
 
 ### 2. Installation dans Chrome
 1. Ouvrez Chrome et allez dans `chrome://extensions/`
