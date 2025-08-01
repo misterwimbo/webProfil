@@ -1,124 +1,118 @@
-# User Profile Extractor - Extension Chrome v2.0
+# 🧠 User Profile Extractor - Analyse Comportementale par IA
 
-## Description
-Cette extension Chrome extrait un profil utilisateur complet incluant l'historique de navigation ET les extensions installées, le tout sauvegardé dans un fichier JSON structuré pour permettre une analyse approfondie du profil utilisateur par des LLM.
+## 📋 Description
 
-## Nouveau format de sortie JSON v2.0
-```json
-{
-    "extensions_installees": {
-        "1": {
-            "name": "AdBlock Plus",
-            "id": "cfhdojbkjhnklbpkdaibdccddilifddb",
-            "version": "3.15.2",
-            "description": "Bloque les publicités"
-        },
-        "2": {
-            "name": "Tampermonkey",
-            "id": "dhdgffkkebhmkfjojejmpbldmpobfkfo",
-            "version": "4.18.0",
-            "description": "Gestionnaire de scripts utilisateur"
-        }
-    },
-    "historique_navigation": {
-        "02/02/2022": {
-            "1": {
-                "heure": "09:15:32",
-                "url": "https://www.google.com/search?q=extension+chrome+développement",
-                "titre": "extension chrome développement - Recherche Google",
-                "nombre_visites": 1
-            },
-            "2": {
-                "heure": "14:22:18", 
-                "url": "https://korben.fr/article-intelligence-artificielle.html",
-                "titre": "L'IA va-t-elle remplacer les développeurs ?",
-                "nombre_visites": 3
-            }
-        },
-        "01/02/2022": {
-            "1": {
-                "heure": "23:45:12",
-                "url": "https://stackoverflow.com/questions/chrome-extension-api",
-                "titre": "Chrome Extension API - Stack Overflow", 
-                "nombre_visites": 2
-            }
-        }
-    },
-    "metadata": {
-        "date_extraction": "01/08/2025",
-        "heure_extraction": "14:30:15",
-        "nombre_extensions": 12,
-        "nombre_jours_historique": 365,
-        "total_visites": 15420
-    }
-}
-```
+Cette extension Chrome extrait votre profil de navigation complet pour générer une analyse psychologique approfondie via intelligence artificielle.
 
-## 🚀 Nouvelles fonctionnalités v2.1
-- ✅ **Extraction des extensions installées** (nom, ID, version, description)
-- ✅ **Historique complet avec URLs détaillées** (paramètres de recherche, pages spécifiques)
-- ✅ **Horodatage précis** (heure exacte de chaque visite - HH:MM:SS)
-- ✅ **Titres des pages** (titre complet de chaque page visitée)
-- ✅ **Compteur de visites** (nombre de fois qu'une page a été visitée)
-- ✅ **URLs complètes** (informations détaillées avec paramètres)
-- ✅ **Métadonnées enrichies** (statistiques d'extraction)
-- ✅ **Profil utilisateur complet** pour analyse LLM avancée
+## 🎯 Objectif Principal
 
-## Fonctionnalités existantes
-- ✅ Extraction via API Chrome native
-- ✅ Organisation des données par date (DD/MM/YYYY)
-- ✅ Numérotation séquentielle des sites et extensions
-- ✅ Interface utilisateur intuitive
-- ✅ Aperçu du JSON avant téléchargement
-- ✅ Téléchargement automatique du fichier JSON
+**Créer un profil psychologique et comportemental détaillé** en analysant vos habitudes de navigation avec des LLM (ChatGPT, Claude, etc.).
 
-## Installation
+## 🔍 Données Extraites
 
-### 1. Préparation
-1. Clonez ou téléchargez ce projet
+L'extension collecte automatiquement :
 
+### 📊 **Historique de Navigation**
+- Sites visités avec timestamps précis
+- Fréquence de visite par domaine
+- Patterns temporels d'activité
+- Heures de connexion et habitudes
 
-### 2. Installation dans Chrome
-1. Ouvrez Chrome et allez dans `chrome://extensions/`
-2. Activez le "Mode développeur" en haut à droite
-3. Cliquez sur "Charger l'extension non empaquetée"
-4. Sélectionnez le dossier contenant les fichiers de l'extension
-5. L'extension apparaîtra dans la barre d'outils
+### 🔌 **Extensions Installées** 
+- Liste complète avec descriptions
+- Versions et fonctionnalités
+- Révèle les besoins et compétences techniques
 
-## Utilisation
-1. Cliquez sur l'icône de l'extension dans la barre d'outils
-2. Cliquez sur "Aperçu JSON" pour voir un échantillon des données (optionnel)
-3. Cliquez sur "Extraire l'historique" pour récupérer le profil complet
-4. Cliquez sur "Télécharger JSON" pour sauvegarder le fichier
+### 📥 **Téléchargements**
+- Fichiers téléchargés avec dates/heures
+- Types de contenus privilégiés
+- Sources et patterns de téléchargement
 
-## Permissions requises
-- `history` : Pour accéder à l'historique de navigation
-- `downloads` : Pour télécharger le fichier JSON généré
-- `management` : Pour lister les extensions installées
+### 🔖 **Signets/Favoris**
+- Organisation personnelle
+- Centres d'intérêt révélés
+- Structure mentale et priorités
 
-## Analyse avancée des données
-Le fichier JSON généré peut être analysé par des LLM pour :
-- **Profil de navigation détaillé** : recherches exactes, pages consultées, paramètres d'URL
-- **Patterns temporels précis** : heures de navigation, habitudes horaires, pics d'activité
-- **Rythmes de vie** : horaires de travail, veille tardive, habitudes weekend/semaine
-- **Intentions de recherche** : termes recherchés sur Google, Bing, etc.
-- **Centres d'intérêt précis** : articles spécifiques, sujets techniques, loisirs
-- **Fréquence d'utilisation** : sites/pages les plus visités
-- **Profil technique** : extensions utilisées, niveau d'expertise
-- **Profil sécuritaire** : extensions de sécurité, bloqueurs de pub
-- **Profil productivité** : outils de développement, extensions professionnelles
-- **Analyse comportementale** : corrélation entre extensions, sites, heures et fréquences
+### ⚡ **Analyse Comportementale**
+- Sites à "rebond rapide" (abandonnés < 30s)
+- Sites à "engagement long" (+ 5 minutes)
+- Patterns de navigation révélant la personnalité
 
-## Notes techniques
-- Compatible avec Manifest V3
-- Utilise l'API Chrome Extensions moderne
-- Interface responsive
-- Gestion d'erreurs intégrée
-- Progress indicator pour les gros volumes de données
+## 🤖 Analyse par Intelligence Artificielle
 
-## Améliorations futures possibles
-- Filtrage par type de site
-- Export en différents formats (CSV, XML)
-- Analyse intégrée des données
-- Graphiques de visualisation
-- Sauvegarde cloud
+### **Processus d'analyse :**
+
+1. **📤 Extraction** : L'extension génère un fichier JSON complet
+2. **🤖 Upload IA** : Téléversement sur ChatGPT/Claude/Gemini
+3. **🔬 Analyse** : Prompt spécialisé en profiling comportemental
+4. **📊 Profil** : Rapport psychologique détaillé généré
+
+### **Profil généré par l'IA :**
+
+🔍 **Identification Personnelle**
+- Prénom/nom probables
+- Âge estimé (±5 ans)
+- Genre et indices comportementaux
+
+👤 **Profil Socio-Professionnel**
+- Métier et secteur d'activité
+- Niveau d'éducation
+- Situation familiale
+- Localisation géographique
+- Niveau socio-économique
+
+🧠 **Profil Psychologique**
+- Traits de personnalité (Big Five)
+- Centres d'intérêt et passions
+- Peurs et anxiétés détectées
+- Patterns comportementaux
+
+⏰ **Analyse Temporelle**
+- Rythme de vie (matinal/nocturne)
+- Habitudes de sommeil déduites
+- Moments de stress/détente
+- Pics d'activité
+
+🔒 **Comportements Secrets**
+- Navigation privée patterns
+- Addictions potentielles
+- Comportements contradictoires
+- Activités dissimulées
+
+## 🛡️ Confidentialité et Sécurité
+
+- ✅ **Données locales** : Aucune transmission automatique
+- ✅ **Contrôle total** : Vous décidez quoi analyser
+- ✅ **Usage personnel** : Pour auto-analyse uniquement
+- ⚠️ **Sensibilité** : Données très personnelles à protéger
+
+## 📖 Instructions d'Utilisation
+
+1. **Installation** : Chargez l'extension en mode développeur
+2. **Extraction** : Cliquez sur "Extraire l'historique"
+3. **Téléchargement** : Sauvegardez le fichier JSON généré
+4. **Analyse IA** : 
+   - Allez sur ChatGPT/Claude.ai
+   - Uploadez le fichier JSON
+   - Utilisez le prompt d'analyse fourni (bouton "📋 Voir le prompt d'analyse")
+5. **Profil** : Obtenez votre analyse comportementale complète
+
+## ⚖️ Usage Éthique
+
+- 🎯 **Auto-analyse** uniquement
+- 🚫 **Jamais sur autrui** sans consentement
+- 🔒 **Protection des données** obligatoire
+- 📚 **Usage éducatif** sur la vie privée numérique
+
+## 🛠️ Configuration Icônes
+
+Pour finaliser l'installation, ajoutez dans le dossier `icons/` :
+- `icon16.png` - 16x16 pixels 
+- `icon48.png` - 48x48 pixels
+- `icon128.png` - 128x128 pixels
+
+**Suggestion** : Icônes représentant l'analyse (🧠, 📊, 🎯) en style moderne.
+
+---
+
+**⚠️ IMPORTANT** : Cette extension révèle des informations très personnelles. Utilisez-la de manière responsable et protégez vos données.
